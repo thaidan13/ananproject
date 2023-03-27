@@ -46,6 +46,7 @@ const Information = () => {
                                     src="https://static.mservice.io/blogscontents/momo-upload-api-230321162303-638150125831746329.jpg"
                                     alt="img"
                                 />
+
                                 <p className="text-xs text-gray-300">
                                     21/03/2023
                                 </p>
