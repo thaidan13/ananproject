@@ -12,11 +12,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/ananproject/" element={<Home />} />
-                    <Route path="/ananproject/trangchu" element={<Home />} />
-                    <Route
-                        path="/ananproject/tintuc"
-                        element={<Information />}
-                    />
+                    <Route path="/trangchu" element={<Home />} />
+                    <Route path="/tintuc" element={<Information />} />
                     <Route path="*" element={<PageNotFound />} />
                 </Routes>
             </Router>
