@@ -27,8 +27,9 @@ const devices: Device[] = [
 ];
 
 const Home = () => {
-    const [device, setDevice] = useState<Device>(devices[0]);
+    const [progress, setProgress] = useState<number>(3.2);
 
+    const [device, setDevice] = useState<Device>(devices[0]);
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
@@ -176,8 +177,13 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="p-2">
-                                        <div className="w-full bg-gray-400 h-2 rounded-l-lg rounded-r-lg overflow-hidden ">
-                                            <div className="w-[30%] bg-pink-500 h-2"></div>
+                                        <div className="w-full bg-gray-400 h-2 rounded-l-lg rounded-r-lg overflow-hidden">
+                                            <div
+                                                style={{
+                                                    width: `${progress}%`,
+                                                }}
+                                                className={`bg-pink-500 h-2`}
+                                            ></div>
                                         </div>
                                         <div className="py-4 grid grid-cols-3 text-xs items-center text-center">
                                             <div>
@@ -186,7 +192,7 @@ const Home = () => {
                                             </div>
                                             <div>
                                                 <p>Đạt được</p>
-                                                <p>30%</p>
+                                                <p>{progress}%</p>
                                             </div>
                                             <div className="min-w-max">
                                                 <a
@@ -221,6 +227,16 @@ const Home = () => {
                     <p>Ví nhân ái - Thiện nguyện mỗi ngày</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2"></div>
+            </div>
+            <div id="session-5" className="py-4">
+                <div className="text-center text-pink-400 text-xl -font-extrabold">
+                    <p>Các đối tác đồng hành</p>
+                </div>
+            </div>
+            <div id="session-6" className="py-4">
+                <div className="text-center text-pink-400 text-xl -font-extrabold">
+                    <p>Khi thiện nguyện là nguồn hạnh phúc</p>
+                </div>
             </div>
         </>
     );
